@@ -10,13 +10,10 @@ for(let filename of filenames){
     let value:number=parseInt(fs.readFileSync(directory+filename, "utf-8"));
     min_file = value<min?filename:min_file;
     min=value<min?value:min;
-    // find the name of the file with the smallest number
 
 }
 for (let filename of filenames) {
     let value:number=parseInt(fs.readFileSync(directory+filename, "utf-8"));
-    min = value < min ? value : min;
-    // find the name of the file with the smallest number
     max_file = value > max ? filename : max_file;
     max = value > max ? value : max;
 }
