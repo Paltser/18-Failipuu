@@ -20,3 +20,13 @@ for (const file of files) {
 }
 
 console.log('All file contents:', contents);
+
+
+let directory = 'kolmapaev';
+let sum: number = 0;
+let filenames2:string[] = fs.readdirSync(directory);
+for(let filename of filenames2){
+    let contents:string=fs.readFileSync(`${directory}/${filename}`, "utf-8");
+    sum+=parseInt(contents);
+}
+console.log(sum)
